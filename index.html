@@ -11,167 +11,94 @@
         .text-primary { color: #FFC107; }
         .sidebar-link:hover { background-color: #FFC107; color: black !important; transition: 0.3s; }
         html { scroll-behavior: smooth; }
-        .project-card:hover { border-color: #FFC107; transform: translateY(-5px); transition: all 0.4s; }
     </style>
 </head>
 <body class="bg-gray-100 font-sans text-gray-900">
 
     <nav class="fixed left-0 top-0 h-full w-16 md:w-64 bg-white border-r border-gray-200 z-50 flex flex-col items-center py-8">
-        <div class="mb-10 text-center px-4">
-            <div class="w-12 h-12 md:w-24 md:h-24 bg-black rounded-full mx-auto mb-4 overflow-hidden border-4 border-primary shadow-lg">
+        <div class="mb-10 text-center px-2 md:px-4">
+            <div class="w-10 h-10 md:w-24 md:h-24 bg-black rounded-full mx-auto mb-4 overflow-hidden border-2 md:border-4 border-primary shadow-lg">
                 <img src="pawan.png" alt="Pawan Raj" class="w-full h-full object-cover">
             </div>
             <h2 class="hidden md:block font-bold text-lg uppercase tracking-widest text-gray-800">Pawan Raj</h2>
         </div>
         
-        <div class="flex flex-col w-full space-y-1 overflow-y-auto">
-            <a href="#home" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs"><i class="fas fa-home"></i> <span class="hidden md:inline">Home</span></a>
-            <a href="#about" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs"><i class="fas fa-user"></i> <span class="hidden md:inline">About</span></a>
-            <a href="#projects" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs"><i class="fas fa-code"></i> <span class="hidden md:inline">Projects</span></a>
-            <a href="#learning" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs"><i class="fas fa-graduation-cap"></i> <span class="hidden md:inline">Learning</span></a>
-            <a href="#assignments" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs"><i class="fas fa-tasks"></i> <span class="hidden md:inline">Assignments</span></a>
+        <div class="flex flex-col w-full space-y-1">
+            <a href="#home" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs">
+                <i class="fas fa-home"></i> <span class="hidden md:inline">Home</span>
+            </a>
+            <a href="#about" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs">
+                <i class="fas fa-user"></i> <span class="hidden md:inline">About</span>
+            </a>
+            <a href="#projects" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs">
+                <i class="fas fa-code"></i> <span class="hidden md:inline">Projects</span>
+            </a>
+            <a href="#learning" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs">
+                <i class="fas fa-graduation-cap"></i> <span class="hidden md:inline">Learning</span>
+            </a>
+            <a href="#assignments" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4 text-gray-400 font-bold uppercase text-xs">
+                <i class="fas fa-tasks"></i> <span class="hidden md:inline">Assignments</span>
+            </a>
         </div>
     </nav>
 
     <main class="ml-16 md:ml-64">
         
         <section id="home" class="min-h-screen flex flex-col md:flex-row items-center bg-white">
-            <div class="w-full md:w-1/2 p-10 md:p-20 order-2 md:order-1">
-                <h4 class="text-xl font-medium mb-2 uppercase tracking-widest text-gray-400">Software Engineer</h4>
-                <h1 class="text-5xl md:text-7xl font-black uppercase leading-tight mb-4">
+            <div class="w-full md:w-1/2 p-6 md:p-20 order-2 md:order-1">
+                <h4 class="text-lg md:text-xl font-medium mb-2 uppercase tracking-widest text-gray-400">Software Engineer</h4>
+                <h1 class="text-4xl md:text-7xl font-black uppercase leading-tight mb-4">
                     PAWAN <span class="text-primary">RAJ</span>
                 </h1>
-                <p class="bg-black text-white px-4 py-1 inline-block font-bold mb-6 uppercase text-xs tracking-widest">AI & Machine Learning Specialist</p>
-                <p class="text-gray-500 max-w-md mb-8 leading-relaxed">
-                    B.Tech (CSE) student at Graphic Era Hill University. Focused on Computer Vision, NLP, and Deep Learning applications.
+                <p class="bg-black text-white px-4 py-1 inline-block font-bold mb-6 uppercase text-[10px] md:text-xs tracking-widest">AI & Machine Learning Specialist</p>
+                <p class="text-gray-500 max-w-md mb-8 leading-relaxed text-sm md:text-base">
+                    B.Tech (CSE) student at Graphic Era Hill University. Specialized in Deep Learning and Computer Vision.
                 </p>
-                <div class="flex gap-4">
-                    <a href="#projects" class="bg-primary text-black font-bold px-8 py-3 rounded-full hover:shadow-2xl transition uppercase tracking-widest text-xs">Explore My Work</a>
-                </div>
+                <a href="#projects" class="bg-primary text-black font-bold px-6 md:px-8 py-3 rounded-full hover:shadow-2xl transition uppercase tracking-widest text-xs">My Projects</a>
             </div>
-            <div class="w-full md:w-1/2 h-64 md:h-screen bg-gray-200 order-1 md:order-2 overflow-hidden">
-                <img src="pawan.png" alt="Pawan Raj Prajapati" class="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 transition duration-1000">
+            <div class="w-full md:w-1/2 h-80 md:h-screen bg-gray-200 order-1 md:order-2">
+                <img src="pawan.png" alt="Pawan Raj Prajapati" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-1000">
             </div>
         </section>
 
-        <section id="about" class="py-20 px-10 md:px-20 bg-gray-50">
-            <h2 class="text-5xl font-black mb-12 uppercase">About & <span class="text-primary">Credentials</span></h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                        I am an aspiring AI Engineer with a CGPA of 7.5. I have solved over 200+ LeetCode problems, focusing on optimized data structures and algorithms. I serve as a Core Member of the Codev Club, organizing 5+ major coding events.
-                    </p>
-                    <h3 class="font-black text-sm uppercase tracking-widest mb-4 border-b-2 border-primary inline-block">Certifications</h3>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center gap-3 text-sm font-bold text-gray-700 uppercase"><i class="fas fa-award text-primary"></i> Google Cloud Computing Foundations (NPTEL)</li>
-                        <li class="flex items-center gap-3 text-sm font-bold text-gray-700 uppercase"><i class="fas fa-award text-primary"></i> Data Mining (NPTEL)</li>
-                        <li class="flex items-center gap-3 text-sm font-bold text-gray-700 uppercase"><i class="fas fa-award text-primary"></i> Graph-e-Thon 2.0 participant</li>
-                    </ul>
+        <section id="projects" class="py-16 px-6 md:px-20 bg-white">
+            <h2 class="text-3xl md:text-5xl font-black mb-12 uppercase">Project <span class="text-primary">Reports</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 border-l-4 border-primary shadow-sm">
+                    <h3 class="text-xl font-black uppercase mb-2">Dog Skin Detection</h3>
+                    <p class="text-xs text-gray-500 mb-4">92% Accuracy | PyTorch | Flask</p>
+                    <p class="text-sm text-gray-600">Developed a CNN model for real-time diagnostics with OpenCV optimization.</p>
                 </div>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-black text-white p-8 text-center shadow-xl">
-                        <h3 class="text-4xl font-black text-primary mb-2">200+</h3>
-                        <p class="text-[10px] font-bold uppercase tracking-widest">LeetCode Problems</p>
-                    </div>
-                    <div class="bg-white p-8 text-center shadow-xl border-b-8 border-primary">
-                        <h3 class="text-4xl font-black mb-2">5+</h3>
-                        <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Hackathons</p>
-                    </div>
-                    <div class="col-span-2 bg-primary p-6 text-black font-black uppercase text-center tracking-tighter">
-                        Core Member of Codev Club
-                    </div>
+                <div class="p-6 bg-gray-50 border-l-4 border-primary shadow-sm">
+                    <h3 class="text-xl font-black uppercase mb-2">Virtual Mouse</h3>
+                    <p class="text-xs text-gray-500 mb-4">95% Accuracy | Mediapipe</p>
+                    <p class="text-sm text-gray-600">Hand-tracking system reducing cursor latency by 30% for touchless control.</p>
+                </div>
+                <div class="p-6 bg-gray-50 border-l-4 border-primary shadow-sm">
+                    <h3 class="text-xl font-black uppercase mb-2">Plagiarism Detector</h3>
+                    <p class="text-xs text-gray-500 mb-4">98% Accuracy | NLP | Random Forest</p>
+                    <p class="text-sm text-gray-600">Text similarity engine using Rabin-Karp and TF-IDF preprocessing.</p>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="py-20 px-10 md:px-20 bg-white">
-            <h2 class="text-5xl font-black mb-12 uppercase">Project <span class="text-primary">Reports</span></h2>
-            <div class="space-y-16">
-                <div class="project-card border-l-8 border-gray-200 p-8 bg-gray-50 shadow-sm">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">PYTHON</span>
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">PYTORCH</span>
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">FLASK</span>
-                    </div>
-                    <h3 class="text-3xl font-black uppercase mb-4">Dog Skin Infection Detection</h3>
-                    <p class="text-gray-600 mb-4 font-medium">Developed a high-accuracy CNN model for real-time veterinary diagnostics.</p>
-                    <ul class="list-disc ml-5 text-sm text-gray-500 space-y-2">
-                        <li>Achieved **92% test accuracy** using Transfer Learning on a dataset of 1,200+ images.</li>
-                        <li>Optimized image preprocessing with OpenCV, resulting in a **15% performance boost**.</li>
-                        <li>Deployed as a web app capable of handling **50+ concurrent users**.</li>
-                    </ul>
-                </div>
-
-                <div class="project-card border-l-8 border-gray-200 p-8 bg-gray-50 shadow-sm">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">OPENCV</span>
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">MEDIAPIPE</span>
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">PYTHON</span>
-                    </div>
-                    <h3 class="text-3xl font-black uppercase mb-4">Hand-Tracking Virtual Mouse</h3>
-                    <p class="text-gray-600 mb-4 font-medium">A touchless interface system improving accessibility for 10+ applications.</p>
-                    <ul class="list-disc ml-5 text-sm text-gray-500 space-y-2">
-                        <li>Achieved **95% gesture recognition accuracy** across 500+ test gestures.</li>
-                        <li>Reduced system cursor latency by **30%** through optimized frame-processing logic.</li>
-                        <li>Implemented robust click and drag actions via specific fingertip distance calculations.</li>
-                    </ul>
-                </div>
-
-                <div class="project-card border-l-8 border-gray-200 p-8 bg-gray-50 shadow-sm">
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">NLP</span>
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">RANDOM FOREST</span>
-                        <span class="bg-black text-white px-3 py-1 text-[10px] font-bold">FLASK</span>
-                    </div>
-                    <h3 class="text-3xl font-black uppercase mb-4">NLP Plagiarism Detector</h3>
-                    <p class="text-gray-600 mb-4 font-medium">Advanced document similarity checker serving 100+ daily users.</p>
-                    <ul class="list-disc ml-5 text-sm text-gray-500 space-y-2">
-                        <li>Uses **Rabin-Karp algorithm** combined with a Random Forest classifier for **98% accuracy**.</li>
-                        <li>Reduced text processing time by **40%** through efficient TF-IDF tokenization.</li>
-                        <li>Built a full-stack Flask application for real-time file upload and comparison.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="learning" class="py-20 px-10 md:px-20 bg-gray-900 text-white">
-            <h2 class="text-5xl font-black mb-12 uppercase text-center md:text-left">Weekly <span class="text-primary">Learning</span> Log</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="border-b border-gray-700 pb-6">
-                    <span class="text-primary font-bold">WEEK 01-04</span>
-                    <h4 class="text-xl font-bold uppercase mt-2">Deep Learning Foundations</h4>
-                    <p class="text-gray-400 text-sm mt-2">Focusing on backpropagation, weight initialization, and CNN layers.</p>
-                </div>
-                <div class="border-b border-gray-700 pb-6">
-                    <span class="text-primary font-bold">WEEK 05-08</span>
-                    <h4 class="text-xl font-bold uppercase mt-2">Cloud Deployment (GCP)</h4>
-                    <p class="text-gray-400 text-sm mt-2">Learning to containerize ML models using Docker for Google Cloud deployment.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="assignments" class="py-20 px-10 md:px-20 bg-white">
-            <h2 class="text-5xl font-black mb-12 uppercase">Assignments</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-                <a href="assign1.html" class="p-8 bg-gray-50 border-b-4 border-black hover:border-primary transition-all text-center">
-                    <i class="fas fa-file-alt text-2xl mb-4"></i>
-                    <h3 class="font-black uppercase text-xs">Assignment 01</h3>
+        <section id="assignments" class="py-16 px-6 md:px-20 bg-gray-900 text-white">
+            <h2 class="text-3xl md:text-5xl font-black mb-12 uppercase text-center">Assignments</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <a href="assign1.html" class="p-4 md:p-8 bg-gray-800 border-b-4 border-primary text-center hover:bg-primary hover:text-black transition">
+                    <h3 class="font-black uppercase text-[10px] md:text-xs">Task 01</h3>
                 </a>
-                <a href="assign2.html" class="p-8 bg-gray-50 border-b-4 border-black hover:border-primary transition-all text-center">
-                    <i class="fas fa-file-alt text-2xl mb-4"></i>
-                    <h3 class="font-black uppercase text-xs">Assignment 02</h3>
+                <a href="assign2.html" class="p-4 md:p-8 bg-gray-800 border-b-4 border-primary text-center hover:bg-primary hover:text-black transition">
+                    <h3 class="font-black uppercase text-[10px] md:text-xs">Task 02</h3>
                 </a>
-                <a href="assign3.html" class="p-8 bg-gray-50 border-b-4 border-black hover:border-primary transition-all text-center">
-                    <i class="fas fa-file-alt text-2xl mb-4"></i>
-                    <h3 class="font-black uppercase text-xs">Assignment 03</h3>
+                <a href="assign3.html" class="p-4 md:p-8 bg-gray-800 border-b-4 border-primary text-center hover:bg-primary hover:text-black transition">
+                    <h3 class="font-black uppercase text-[10px] md:text-xs">Task 03</h3>
                 </a>
-                <a href="assign4.html" class="p-8 bg-gray-50 border-b-4 border-black hover:border-primary transition-all text-center">
-                    <i class="fas fa-file-alt text-2xl mb-4"></i>
-                    <h3 class="font-black uppercase text-xs">Assignment 04</h3>
+                <a href="assign4.html" class="p-4 md:p-8 bg-gray-800 border-b-4 border-primary text-center hover:bg-primary hover:text-black transition">
+                    <h3 class="font-black uppercase text-[10px] md:text-xs">Task 04</h3>
                 </a>
-                <a href="assign5.html" class="p-8 bg-gray-50 border-b-4 border-black hover:border-primary transition-all text-center">
-                    <i class="fas fa-file-alt text-2xl mb-4"></i>
-                    <h3 class="font-black uppercase text-xs">Assignment 05</h3>
+                <a href="assign5.html" class="p-4 md:p-8 bg-gray-800 border-b-4 border-primary text-center hover:bg-primary hover:text-black transition">
+                    <h3 class="font-black uppercase text-[10px] md:text-xs">Task 05</h3>
                 </a>
             </div>
         </section>
