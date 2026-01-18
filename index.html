@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawan Raj Prajapati | AI & ML Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .bg-primary { background-color: #FFC107; }
+        .text-primary { color: #FFC107; }
+        .sidebar-link:hover { background-color: #FFC107; color: black; transition: 0.3s; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-gray-900">
+
+    <nav class="fixed left-0 top-0 h-full w-16 md:w-64 bg-white border-r border-gray-200 z-50 flex flex-col items-center py-8">
+        <div class="mb-10 text-center px-4">
+            <div class="w-12 h-12 md:w-24 md:h-24 bg-black rounded-full mx-auto mb-4 overflow-hidden border-4 border-primary">
+                <div class="flex items-center justify-center h-full text-white text-2xl font-bold">PR</div>
+            </div>
+            <h2 class="hidden md:block font-bold text-lg uppercase tracking-widest">Pawan Raj</h2>
+        </div>
+        
+        <div class="flex flex-col w-full space-y-2">
+            <a href="#home" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4"><i class="fas fa-home"></i> <span class="hidden md:inline uppercase text-sm font-semibold">Home</span></a>
+            <a href="#about" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4"><i class="fas fa-user"></i> <span class="hidden md:inline uppercase text-sm font-semibold">About</span></a>
+            <a href="#resume" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4"><i class="fas fa-file-alt"></i> <span class="hidden md:inline uppercase text-sm font-semibold">Resume</span></a>
+            <a href="#portfolio" class="sidebar-link p-4 text-center md:text-left md:pl-8 flex items-center gap-4"><i class="fas fa-briefcase"></i> <span class="hidden md:inline uppercase text-sm font-semibold">Portfolio</span></a>
+        </div>
+    </nav>
+
+    <main class="ml-16 md:ml-64">
+        
+        <section id="home" class="min-h-screen flex flex-col md:flex-row items-center bg-white overflow-hidden">
+            <div class="w-full md:w-1/2 p-10 md:p-20 order-2 md:order-1">
+                <h4 class="text-xl font-medium mb-2 uppercase tracking-widest">Hi There!</h4>
+                <h1 class="text-5xl md:text-7xl font-black uppercase leading-tight mb-4">
+                    I'M <span class="text-primary">PAWAN</span>
+                </h1>
+                <p class="bg-black text-white px-4 py-1 inline-block font-bold mb-6">B.TECH (CSE) | AI & MACHINE LEARNING</p>
+                <p class="text-gray-600 max-w-md mb-8">
+                    An aspiring software engineer specializing in Python and Deep Learning. Focused on building intelligent systems that solve real-world problems.
+                </p>
+                <a href="#portfolio" class="bg-primary text-black font-bold px-8 py-3 rounded-full hover:shadow-lg transition">VIEW MY WORK</a>
+            </div>
+            <div class="w-full md:w-1/2 h-64 md:h-screen bg-gray-200 order-1 md:order-2">
+                <img src="https://via.placeholder.com/800x1000" alt="Pawan Raj Prajapati" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+            </div>
+        </section>
+
+        <section id="about" class="py-20 px-10 md:px-20 bg-gray-50">
+            <h2 class="text-4xl font-black mb-12 uppercase text-center md:text-left">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <p class="text-lg leading-relaxed mb-6">
+                        I am currently pursuing my B.Tech in Computer Science at **Graphic Era Hill University**, Dehradun[cite: 5]. My journey is fueled by a passion for solving algorithmic challenges and developing innovative AI solutions[cite: 38].
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 shadow-sm border-b-4 border-primary">
+                            <h3 class="text-3xl font-black">200+</h3>
+                            <p class="text-xs uppercase text-gray-500 font-bold">LeetCode Problems Solved</p>
+                        </div>
+                        <div class="bg-white p-6 shadow-sm border-b-4 border-primary">
+                            <h3 class="text-3xl font-black">5+</h3>
+                            <p class="text-xs uppercase text-gray-500 font-bold">Hackathons Attended</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="font-bold uppercase tracking-widest border-b-2 border-primary inline-block mb-4">Core Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-black text-white px-3 py-1 text-sm font-bold">Python</span>
+                        <span class="bg-black text-white px-3 py-1 text-sm font-bold">Deep Learning</span>
+                        <span class="bg-black text-white px-3 py-1 text-sm font-bold">PyTorch</span>
+                        <span class="bg-black text-white px-3 py-1 text-sm font-bold">Flask</span>
+                        <span class="bg-black text-white px-3 py-1 text-sm font-bold">OpenCV</span>
+                        <span class="bg-black text-white px-3 py-1 text-sm font-bold">ReactJS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-20 px-10 md:px-20 bg-white">
+            <h2 class="text-4xl font-black mb-12 uppercase text-center md:text-left">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden bg-gray-100 aspect-square shadow-md">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black mb-2 uppercase">Dog Infection Detection</h3>
+                        <p class="text-sm text-gray-600 mb-4">CNN-based model achieving 92% test accuracy using transfer learning[cite: 10, 11].</p>
+                        <span class="text-xs font-bold text-primary px-2 py-1 bg-black">PyTorch / OpenCV</span>
+                    </div>
+                    <div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center p-6 text-center">
+                        <p class="text-black font-bold italic">Optimized 1,500+ images, improving performance by 15%[cite: 11].</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden bg-gray-100 aspect-square shadow-md">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black mb-2 uppercase">Virtual Mouse</h3>
+                        <p class="text-sm text-gray-600 mb-4">Hand-tracking mouse with 95% gesture recognition accuracy[cite: 16].</p>
+                        <span class="text-xs font-bold text-primary px-2 py-1 bg-black">Mediapipe / Python</span>
+                    </div>
+                    <div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center p-6 text-center">
+                        <p class="text-black font-bold italic">Reduced cursor latency by 30% for improved accessibility[cite: 17, 18].</p>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden bg-gray-100 aspect-square shadow-md">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-black mb-2 uppercase">Plagiarism Detector</h3>
+                        <p class="text-sm text-gray-600 mb-4">98% accuracy on 2,000+ test documents using Rabin-Karp[cite: 22].</p>
+                        <span class="text-xs font-bold text-primary px-2 py-1 bg-black">NLP / Flask</span>
+                    </div>
+                    <div class="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex items-center justify-center p-6 text-center">
+                        <p class="text-black font-bold italic">Reduced processing time by 40% with NLP preprocessing[cite: 23].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
