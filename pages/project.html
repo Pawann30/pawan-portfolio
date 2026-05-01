@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Pawan Raj Prajapati</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="background: var(--white);">
+
+    <div class="page-container">
+        <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+        <div id="project-content">
+            <div class="page-tags" id="project-tags"></div>
+            <h1 class="page-title" id="project-title">Loading...</h1>
+            <p class="page-date" id="project-date"></p>
+            <p class="page-desc" id="project-desc"></p>
+
+            <h3 style="font-weight:800; font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:1rem; color: var(--primary);">Key Highlights</h3>
+            <ul class="page-highlights" id="project-highlights"></ul>
+
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                <a href="#" id="github-link" target="_blank" class="btn-github" style="padding:0.85rem 2.5rem; font-size:0.75rem;">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="/" class="btn-outline" style="padding:0.85rem 2.5rem; font-size:0.75rem;">
+                    <i class="fas fa-arrow-left"></i> All Projects
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const slug = window.location.pathname.split('/project/')[1];
+        
+        fetch(`/api/project/${slug}`)
+            .then(res => res.json())
+            .then(data => {
+                document.title = `${data.title} | Pawan Raj Prajapati`;
+                document.getElementById('project-title').innerHTML = data.title;
+                document.getElementById('project-date').textContent = data.date;
+                document.getElementById('project-desc').textContent = data.description;
+                document.getElementById('github-link').href = data.github;
+
+                const tagsEl = document.getElementById('project-tags');
+                data.tags.forEach(tag => {
+                    const span = document.createElement('span');
+                    span.className = 'project-tag';
+                    span.textContent = tag;
+                    tagsEl.appendChild(span);
+                });
+
+                const highlightsEl = document.getElementById('project-highlights');
+                data.highlights.forEach(h => {
+                    const li = document.createElement('li');
+                    li.innerHTML = h;
+                    highlightsEl.appendChild(li);
+                });
+            })
+            .catch(() => {
+                document.getElementById('project-title').textContent = 'Project Not Found';
+            });
+    </script>
+
+</body>
+</html>

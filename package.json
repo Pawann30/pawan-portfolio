@@ -1,0 +1,13 @@
+{
+  "name": "pawan-raj-portfolio",
+  "version": "1.0.0",
+  "description": "Pawan Raj Prajapati - Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

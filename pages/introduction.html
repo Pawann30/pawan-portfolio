@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Introduction Video | Pawan Raj Prajapati</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .thumbnail-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+            cursor: pointer;
+        }
+        .thumbnail-wrapper img {
+            width: 100%;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .thumbnail-wrapper:hover img {
+            transform: scale(1.03);
+        }
+        .thumbnail-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        .thumbnail-wrapper:hover .thumbnail-overlay {
+            background: rgba(0,0,0,0.4);
+        }
+        .play-btn {
+            width: 80px; height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(255,193,7,0.4);
+            transition: transform 0.3s ease;
+        }
+        .thumbnail-wrapper:hover .play-btn {
+            transform: scale(1.1);
+        }
+        .play-btn i {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-left: 4px;
+        }
+        .video-note {
+            text-align: center;
+            color: var(--gray-400);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body style="background: var(--white);">
+
+    <div class="page-container">
+        <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+        <h1 class="page-title">Self-Introduction <span class="accent">Video</span></h1>
+        <p class="page-date" style="margin-bottom: 2rem;">Get to know me beyond the resume</p>
+
+        <!-- Thumbnail with play overlay -->
+        <div class="thumbnail-wrapper" id="thumbnail-wrapper" onclick="document.getElementById('video-input').click()">
+            <img src="/thunbmail.jpeg" alt="Self Introduction Video Thumbnail - Hello! I'm Pawan, A Student">
+            <div class="thumbnail-overlay" id="thumbnail-overlay">
+                <div class="play-btn">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden video player -->
+        <div class="video-wrapper" id="video-container" style="display:none;">
+            <video id="video-player" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <p class="video-note">Click the thumbnail above or the button below to upload your self-introduction video</p>
+
+        <!-- Upload Zone -->
+        <div class="upload-zone" id="upload-zone" onclick="document.getElementById('video-input').click()">
+            <i class="fas fa-cloud-upload-alt" style="display:block;"></i>
+            <p style="font-weight:600; color: var(--gray-600); margin-bottom:0.5rem;">Upload your self-introduction video</p>
+            <p>Supports MP4, WebM, MOV</p>
+            <input type="file" id="video-input" accept="video/*" style="display:none;">
+        </div>
+
+        <p id="file-name" style="margin-top:1rem; font-size:0.8rem; color:var(--gray-400); text-align:center;"></p>
+
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gray-100);">
+            <a href="/" class="btn-primary"><i class="fas fa-arrow-left"></i> &nbsp;Back to Portfolio</a>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('video-input');
+        const player = document.getElementById('video-player');
+        const videoContainer = document.getElementById('video-container');
+        const thumbnailWrapper = document.getElementById('thumbnail-wrapper');
+        const fileName = document.getElementById('file-name');
+
+        function loadVideo(file) {
+            if (!file) return;
+            const url = URL.createObjectURL(file);
+            player.src = url;
+            videoContainer.style.display = '';
+            thumbnailWrapper.style.display = 'none';
+            player.play();
+            fileName.textContent = '📁 ' + file.name + ' (' + (file.size / (1024*1024)).toFixed(1) + ' MB)';
+        }
+
+        input.addEventListener('change', (e) => loadVideo(e.target.files[0]));
+
+        // Drag and drop
+        const zone = document.getElementById('upload-zone');
+        zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.style.borderColor = 'var(--primary)'; zone.style.background = 'rgba(255,193,7,0.05)'; });
+        zone.addEventListener('dragleave', () => { zone.style.borderColor = ''; zone.style.background = ''; });
+        zone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            zone.style.borderColor = ''; zone.style.background = '';
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('video/')) loadVideo(file);
+        });
+    </script>
+
+</body>
+</html>
